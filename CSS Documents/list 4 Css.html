@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #c0ff6c;
+        }
+        ul{
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 15px 25px rgba(0,0,0,.2);
+        }
+        ul li{
+            position: relative;
+            list-style: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        ul li:before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0);
+            transition: 3s;
+        }
+        ul li:hover:before{
+            width: 0;
+            height: 0;
+            transition: 0s;
+            background-color: rgba(0,0,0,1);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Lorem ipsum dolor</li>
+        <li> sit amet consectetur</li> 
+        <li>adipisicing elit. </li>
+        <li>Quia debitis nemo </li>
+        <li>perferendis nulla? Ut </li> 
+        <li> repellat dolores ipsum </li>
+        <li>pariatur provident facere</li>
+         <li>asperiores?</li>
+    </ul>
+</body>
+</html>

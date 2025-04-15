@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(43, 44, 43);
+        }
+        li {
+            float: left;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .active {
+            background-color: seagreen;
+        }
+        li a:hover:not(.active) {
+            background-color: red;
+        }
+        .menu {
+            background-color: #716f6f;
+        }
+        .drop {
+            display: none;
+            position: absolute;
+            background-color: yellow;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .drop {
+            display: block;
+        }
+        .drop a {
+            color: #110c0cb6;
+            background-color: rgba(14, 13, 14, 0.779);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .drop a:hover {
+            background-color: rgb(223, 234, 14) !important; 
+        }
+        h1 {
+            font-size: 50px;
+            font-family: "Princess Sofia", cursive;
+            text-transform: uppercase;
+            color: #009879;
+            text-shadow: 2px 2px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">More</a></li>
+                <li class="dropdown">
+                    <a href="" class="menu">Menu <i class="fa-solid fa-bars"></i></a>
+                    <div class="drop">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </li>
+                <li style="float: right;"><a href="" class="active">Help</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1>Horizontal Nav Bar</h1>
+</body>
+</html>

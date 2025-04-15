@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        border: 2px solid black;
+        position: relative;
+        display:inline-table;
+    }
+    .grey{
+        position:relative;
+        left: 355px;
+        top: 67px;
+        z-index: 1;
+        background-color: grey;
+        width: 500px;
+        height: 130px;
+    }
+    .blue{
+        position:absolute;
+        left: 355px;
+        top: 67px;
+        z-index: 2;
+        width: 300px;
+        height: 130px;
+        background-color: blue;
+    }
+    .red{
+        position:absolute;
+        left: 355px;
+        top: 67px;
+        z-index: 3;
+        background-color: brown;
+    }
+    .black{
+        position: absolute;
+        left: 55px;
+        top: 67px;
+        width: 900px;
+        height: 130px;
+    
+        z-index: -1;
+        background-color: rgb(19, 208, 145);
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="grey ">Grey box</div>
+        <div class="blue">Blue box</div>
+        <div class="red">Red box</div>
+        <div class="black">Black box</div>
+    </div>
+</body>
+</html>

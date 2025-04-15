@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .drop{
+            position: relative;
+            
+        }
+        .dropdown{
+            display: none;
+            position: absolute;
+            z-index: 1;
+            min-width: 180px;
+            background-color: aliceblue;
+            box-shadow: 0 5px 20px 0  rgb(249, 248, 246);
+        }
+        .drop:hover .dropdown{
+            display: block;
+        }
+        .des{
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="drop">
+        <img src="https://media.istockphoto.com/id/1488944909/photo/environment-concept-green-glass-globe-with-a-tree-in-the-forest-with-sunlight-sustainability.webp?b=1&s=170667a&w=0&k=20&c=f89zMjUr7FldJzgS0p8mJyuTxBWgvhv0kBQL7fcSnjs=" alt="Nature pic" width="100px" height="50px">
+        <div class="dropdown">
+            <img src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg" alt="Nature pic" width="300px" height="200px">
+            <div class="des">Add a description of image here</div>
+        </div>
+    </div>
+</body>
+</html>

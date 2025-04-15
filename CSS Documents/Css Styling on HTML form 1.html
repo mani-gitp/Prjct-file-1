@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       * {
+            box-sizing: border-box;
+        }
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] , button{
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            margin: 2px;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        } 
+        button:hover{
+            background-color: #45a049;
+        }
+        .main {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .fc {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .sc {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        h2{
+            font-size: 50px;
+            font-family: "Princess Sofia", cursive;
+            text-transform: uppercase;
+            color: #009879;
+            text-shadow: 2px 2px 20px ;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>Css Styling on HTML form</h2>
+
+    <div class="main">
+        <form action="">
+            <div class="row">
+                <div class="fc">
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="sc">
+                    <input type="text" id="fname" name="firstname" placeholder="Write your First Name.......">
+                </div>
+            </div>
+            <div class="row">
+                <div class="fc">
+                    <label for="lname">Last Name</label>
+                </div>
+                <div class="sc">
+                    <input type="text" id="lname" name="lastname" placeholder="Write your Last Name.......">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="fc">
+                    <label for="country">Country</label>
+                </div>
+                <div class="sc">
+                    
+                    <select id="country" name="country">
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    
+                        <option value="India">India</option>
+                        <option value="Uk">Uk</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="China">China</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Afghanistan">Afghanistan</option>  
+                        <option value="India">India</option>
+                        <option value="Uk">Uk</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="China">China</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Afghanistan">Afghanistan</option>  
+
+                    </select>
+                    
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="fc">
+                    <label for="Message">Message</label>
+                </div>
+                <div class="sc">
+                    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <input type="submit" value="Submit">
+                <button>Reset</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>
