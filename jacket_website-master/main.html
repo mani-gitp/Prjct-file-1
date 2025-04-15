@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manna Store Logo</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2a2c30;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            border: 3px solid black;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            background-color: #2a2c30;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .logo-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+     
+
+        .logo-box {
+            background: linear-gradient(135deg, #076bdc, hsl(210, 53%, 54%));
+            color: white;
+            font-weight: 600;
+            font-size: 1.5rem;
+            padding: 8px 12px;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .logo-text {
+            color: hsl(211, 100%, 50%);
+            font-weight: 700;
+            font-size: 1.7rem;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo-box">MANNA</div>
+        <div class="logo-text">STORE</div>
+    </div>
+</body>
+</html>
