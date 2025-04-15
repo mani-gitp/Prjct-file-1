@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for Icons -->
+</head>
+
+<body>
+    <div class="container d-flex flex-column align-items-center mt-5">
+        <!-- First Card -->
+        <div class="card mb-3" style="width: 18rem;">
+            
+            <div class="card-body text-center">
+                
+                <div class="rounded-circle bg-secondary text-white d-inline-flex justify-content-center align-items-center" style="width: 60px; height: 60px; font-size: 24px;">
+                    A
+                </div>
+                <h5 class="card-title mt-3">Abdul Mannan</h5>
+                <p class="card-text">Student at Superior College</p>
+            </div>
+
+            <!-- Connections -->
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item ">
+                   <strong>Connections</strong>
+                   <span class="float-end"><i class="fa-solid fa-user-plus"></i></span>
+                    <a href="#" class="text-decoration-none  d-block text-black-50">Connect with alumni</a>
+                </li>
+
+                <!-- Premium Offer with Icon -->
+                <li class="list-group-item">
+                    <small class="text-muted">
+                        Strengthen your profile with an AI writing assistant
+                    </small>
+                   
+                    <a href="#" class="text-warning text-decoration-none d-block mt-2 "> <i class="fa-solid fa-pen-to-square text-warning me-2"></i>Try Premium for PKR0</a>
+                </li>
+
+                <!-- Saved Items with Icon -->
+                <li class="list-group-item">
+                    <i class="fa-solid fa-bookmark text-secondary me-2"></i>
+                    <a href="#" class="text-decoration-none ms-1 text-decoration-none text-black-50">Saved items</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Second Card -->
+        <div class="card" style="width: 18rem;">
+            <!-- Links with Spacing -->
+            <div class="card-body">
+                <a href="#" class="text-decoration-none text-info d-block mb-3">Groups</a>
+                <a href="#" class=" text-decoration-none text-info mb-3">Events</a> <span class="float-end"><i class="fa-solid fa-plus mb-3"></i></span>
+                <p  class="text-decoration-none text-info d-block mb-2 mt-3">Followed Hashtags</p>
+            </div>
+
+            <!-- Discover more -->
+            <div class="card-footer text-center">
+                <a href="#" class="text-muted text-decoration-none ">Discover more</a>
+            </div>
+        </div>
+ 
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(4) Feed | LinkedIn Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-GlbWzEXkjfBoA-z8No6-4wqQeGB4wRfvVA&s">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        .navbar-brand img {
+            height: 30px;
+        }
+
+        .form-control {
+            border-radius: 50px;
+        }
+
+        .card {
+            border-radius: 10px;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .btn-light {
+            color: #6c757d;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(221, 217, 217);">
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+        <div class="container" >
+            <!-- Left side: Logo and Search Bar -->
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            </a>
+            <form class="d-flex ms-3" style="flex-grow: 1; max-width: 400px;">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                    style="background-color: #eef3f8;">
+            </form>
+            <!-- Toggler for Mobile View -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Right side: Navbar Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto flex-row">
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-center" href="#"><i class="bi bi-house-door-fill"></i><br
+                                class="d-none d-lg-block">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-center" href="#"><i class="bi bi-people-fill"></i><br
+                                class="d-none d-lg-block">My Network</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-center" href="#"><i class="bi bi-briefcase-fill"></i><br
+                                class="d-none d-lg-block">Jobs</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-center" href="#"><i class="bi bi-chat-dots-fill"></i><br
+                                class="d-none d-lg-block">Messaging</a>
+                    </li>
+                    <li class="nav-item me-2 position-relative">
+                        <a class="nav-link text-center" href="#"><i class="bi bi-bell-fill"></i><br
+                                class="d-none d-lg-block">Notifications
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                1
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown me-2">
+                        <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJg1WkDB1L7oevmxqNtajuhUTgEn9uVYNZkg&s"
+                                alt="Profile" class="rounded-circle" style="width: 25px;"><br
+                                class="d-none d-lg-block">Me
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown me-2">
+                        <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-grid-fill"></i><br class="d-none d-lg-block">For Business
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Business Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-center" href="#" style="color: #f0a500;"><i
+                                class="bi bi-star-fill"></i><br class="d-none d-lg-block">Try Premium for PKR0</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex justify-content-between align-items-center">
+        <!-- Main Content -->
+        <div class="container-fluid mt-3">
+            <div class="row justify-content-center">
+                <!-- Left side -->
+                <div class="col-lg-2 col-md-4 col-sm-10 mb-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="rounded-circle bg-secondary text-white d-inline-flex justify-content-center align-items-center"
+                                style="width: 60px; height: 60px; font-size: 24px;">
+                                A
+                            </div>
+                            <h5 class="card-title mt-3">Abdul Mannan</h5>
+                            <p class="card-text">Student at Superior College</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <strong>Connections</strong>
+                                <span class="float-end"><i class="fa-solid fa-user-plus"></i></span>
+                                <a href="#" class="text-decoration-none d-block text-black-50">Connect with alumni</a>
+                            </li>
+                            <li class="list-group-item">
+                                <small class="text-muted">Strengthen your profile with an AI writing assistant</small>
+                                <a href="#" class="text-warning text-decoration-none d-block mt-2">
+                                    <i class="fa-solid fa-pen-to-square text-warning me-2"></i>Try Premium for PKR0
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <i class="fa-solid fa-bookmark text-secondary me-2"></i>
+                                <a href="#" class="text-decoration-none ms-1 text-black-50">Saved items</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card mt-3">
+                        <div class="card-body">
+                            <a href="#" class="text-decoration-none text-info d-block mb-3">Groups</a>
+                            <a href="#" class="text-decoration-none text-info mb-3">Events</a>
+                            <span class="float-end"><i class="fa-solid fa-plus mb-3"></i></span>
+                            <p class="text-decoration-none text-info d-block mb-2 mt-3">Followed Hashtags</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="text-muted text-decoration-none">Discover more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Post Area -->
+                <div class="col-lg-5 col-md-8 col-sm-10 mb-2">
+                    <div class="card p-3">
+                        <div class="d-flex align-items-center">
+                            <div class="rounded-circle bg-success text-white d-flex justify-content-center align-items-center"
+                                style="width: 40px; height: 40px;">
+                                <span class="fs-4">A</span>
+                            </div>
+                            <input type="text" class="form-control ms-3 border"
+                                placeholder="Start a post, try writing with AI">
+                        </div>
+                        <div class="mt-3 d-flex justify-content-between">
+                            <button class="btn btn-light me-2" style="display: flex; align-items: center;">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuQd8XWDC3IfLPRfGAIUzhg6KJnBa3iFZtvg&s"
+                                    class="me-2" style="width: 30px;"> Media
+                            </button>
+                            <button class="btn btn-light me-2" style="display: flex; align-items: center;">
+                                <img src="data:image/jpeg;base64,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"
+                                    class="me-1" style="width: 35px;"> Event
+                            </button>
+                            <button class="btn btn-light" style="display: flex; align-items: center;">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk3Mq8srfCw7rDvKSy0DCCoFzrqB4BbfRATw&s"
+                                    class="me-1" style="width: 30px;"> Write article
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Horizontal Line with Sort by Text -->
+                    <div class="container mt-1" style="max-width: 100%; ">
+                        <div class="d-flex align-items-center">
+                            <hr class="flex-grow-1" style="border: 1px solid #0b0b0b;">
+                            <span class="text-muted ms-2">Sort by: <strong>Top</strong> </span>
+
+                            <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"></a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                            </ul>
+                            </li>
+                        </div>
+                    </div>
+
+
+                    <div class="card mt-2">
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0">
+                            <span class="text-muted">Suggested</span>
+                            <div class="dropdown">
+                                <button class="btn btn-md" type="button" id="dropdownMenuButton"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="material-symbols-outlined">more_horiz</span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/D4E03AQElJIOTaX3TPw/profile-displayphoto-shrink_100_100/0/1712654211819?e=1729728000&v=beta&t=QlQLTYlsvWCi5PRL65Rgiq3l1K5tnCfreIYiidfW_qc"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary "
+                                    style="position: absolute; right: 2%; top: 6%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more
+                                often.<br><br>Earlier,
+                                your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D4E22AQEyi0JPeMc4mg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1723807803722?e=1726704000&v=beta&t=2L9iYD03nlj6kSQq8029A1SKYer7lXoyMCK4oywtN78"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i>
+                                    Send</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------------------------------------- new car -->
+                    <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/C5603AQG15OzjBZQpfA/profile-displayphoto-shrink_100_100/0/1650411955548?e=1729728000&v=beta&t=MoiiYHzITGPmEBFagHYUVNZxw7IZg6TZEN_4EU4jlvw"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQEm4-WkenhAzg/feedshare-shrink_800/feedshare-shrink_800/0/1723634961023?e=1726704000&v=beta&t=yD38uLke2ajz2BbkYWE8GLUHVIJNm2jswDnPak8AVDs"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/v2/C4D03AQFS8E2bdDbOpA/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1616626509738?e=1729123200&v=beta&t=Y1TGqtztNl5w_0BRSnBtIlfqu2v_cQel2SQKEogDpSk"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D4E22AQFQk3Jw6_Wthg/feedshare-shrink_800/feedshare-shrink_800/0/1723711393765?e=1726704000&v=beta&t=KFDrzoTVSCD7B7hVEh4w2UdDcXbZPGbRftDo6fFBaTs"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/v2/D5622AQGeMH7mOddyxg/feedshare-shrink_800/feedshare-shrink_800/0/1723298193796?e=1726704000&v=beta&t=sjsvBiC6xBBWJ_bjJ0tcjPRmU7rhMcR38vbLut2ZZnk"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQEia-NaKq3erw/feedshare-shrink_800/feedshare-shrink_800/0/1723730951304?e=1726704000&v=beta&t=PgXWm6EDwGcjbrtmVBiWQyolYMqUwpbcrWy5D-WULS4"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/v2/D4D03AQE1zYxQOdqu9Q/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1715546749244?e=1729123200&v=beta&t=T7GLuSYqOCbsrr10TVBll_hD224baw9c8fGadxXNyM8"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D4E22AQFDfyEGYyEIlg/image_350_624/image_350_624/0/1723797438273?e=1726704000&v=beta&t=XYndudUWcjaABMXPY64Kkv3BoOqO9tzBWL4tJFpZa4M"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/v2/C4D03AQHBcE63Qi_aqw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1652115049545?e=1729728000&v=beta&t=MOrzgU5ozVYfjyYOKKOFAFd1Y9fX1hBdJxdAjaxE81Q"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHFoNsj5S3oeFVgxwNPNtD062mWr8fXGh7-g&s"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/v2/D4D03AQH7MWepOxRv_g/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1708022953677?e=1729728000&v=beta&t=XZ1ckdio0uB16321bZLggSDgy5WwK93FSVAuu7p_LXA"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D4E22AQEyi0JPeMc4mg/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1723807803722?e=1726704000&v=beta&t=2L9iYD03nlj6kSQq8029A1SKYer7lXoyMCK4oywtN78"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/D4E03AQElJIOTaX3TPw/profile-displayphoto-shrink_100_100/0/1712654211819?e=1729728000&v=beta&t=QlQLTYlsvWCi5PRL65Rgiq3l1K5tnCfreIYiidfW_qc"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQFh6YbRpNCaaw/feedshare-shrink_800/feedshare-shrink_800/0/1723878742217?e=1726704000&v=beta&t=kN3PRu_CAqYq6XN5YHOcOctdWWQckd1qOmE4Jmc-qTU"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/D5603AQEBgXGTCdyfKw/profile-displayphoto-shrink_100_100/0/1718232060074?e=1729728000&v=beta&t=9YXGwixdLncuM7L9h_rLlReTWXJukJP7YqrJjzh1S7o"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D4D22AQEQVwCfL8Z4kQ/feedshare-shrink_800/feedshare-shrink_800/0/1723782664967?e=1726704000&v=beta&t=UYN2N57w1NLQqFDzn0bpdxkrCUVKFaklU_6T3xByZT0"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/v2/C4D03AQFbXQaZGrAZTQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1531756085265?e=1729728000&v=beta&t=EKWYupFAr6I6C-cZalFTJVan76WnNyE9-7LjKQSZwtk"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D4E22AQGpIfAcJlBCcg/feedshare-shrink_800/feedshare-shrink_800/0/1723635934150?e=1726704000&v=beta&t=s19pvC4bAyWTX76n3YJ-Pg1eCXta2qGoK38sk6Qme40"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/v2/C4E03AQEqMZn9vG38mw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516465658480?e=1729728000&v=beta&t=N3QleA015QMpkXJMoF6Svs0t2ejVt16FN7mXezm3PnA"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQEHsJhonDXwEA/feedshare-shrink_800/feedshare-shrink_800/0/1723812865907?e=1726704000&v=beta&t=vIg_2HbZVsvGSb14_mqXc2o8BBOJupxh6j_zIh0pHFc"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!---------------------------------------------------------------------------------- new car -->
+                     <div class="card mt-4">
+                        <!-- Header Section -->
+                        <div class="card-header d-flex justify-content-between align-items-center bg-white border-0 mb-0">
+                            <span class="text-muted">Suggested</span>
+        
+                            <div class="dropdown">
+        
+                                <button class="btn  btn-md" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <span class="material-symbols-outlined">
+                                        more_horiz
+                                    </span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="#">Option 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 2</a></li>
+                                    <li><a class="dropdown-item" href="#">Option 3</a></li>
+                                </ul>
+                                <button class="btn  btn-md" type="button">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <hr class="mx-3 mt-0 mb-0">
+                        <!-- Profile Section -->
+                        <div class="card-body d-flex">
+                            <img src="https://media.licdn.com/dms/image/D4D03AQEVZ8vTK2F96Q/profile-displayphoto-shrink_100_100/0/1694350343126?e=1729123200&v=beta&t=OwCYfwVAwNmJ3p7GTAVzSC6tz-fqnpMPWNJjOASR_J4"
+                                class="rounded-circle me-3" alt="Profile Picture" style="width: 50px; height: 50px;">
+                            <div>
+                                <h6 class="mb-0">Adhil Shetty <span class="text-muted">• 3rd+</span></h6>
+                                <small class="text-muted">CEO at BankBazaar.com | LinkedIn Top Voice | Author</small>
+                                <button type="button" class="btn text-primary"
+                                style="position: absolute; right: 2%; top: 7%;">+Follow</button>
+                                <br>
+                                <small class="text-muted">3d • <i class="fa-solid fa-earth-americas"></i> </small>
+                            </div>
+                        </div>
+                        <!-- Post Text -->
+                        <div class="card-body pt-0">
+                            <p>The RBI has just given you a reason to check your credit score more often.<br><br>Earlier, your
+                                loan
+                                or credit card usage was reported by your bank to...<span
+                                    class="text-primary cursor-pointer">more</span></p>
+        
+                        </div>
+                        <!-- Image Section -->
+                        <img src="https://media.licdn.com/dms/image/v2/D5622AQEm4-WkenhAzg/feedshare-shrink_800/feedshare-shrink_800/0/1723634961023?e=1726704000&v=beta&t=yD38uLke2ajz2BbkYWE8GLUHVIJNm2jswDnPak8AVDs"
+                            class="card-img-top" alt="Post Image">
+                        <!-- Footer Section -->
+                        <div class="card-body">
+                            <div>
+        
+                                <small class="me-2"> <i class="fa-solid fa-thumbs-up"></i>
+                                    <i class="fa-solid fa-heart"></i> 211</small>
+                                <small class="text-muted float-end">18 comments • 18 reposts</small>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <button class="btn btn-light btn-md"><i class="bi bi-hand-thumbs-up"></i> Like</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-chat"></i> Comment</button>
+                                <button class="btn btn-light btn-md"><i class="bi bi-arrow-repeat"></i> Repost</button>
+                                <button class="btn btn-light btn-md"><i class="fa-solid fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-------------------[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]] Right side -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                <div class="col-lg-2 col-md-4 col-sm-10 mb-4">
+                    <div class="card p-3">
+                        <h6 class="card-title">Add to your feed<img
+                                src="data:image/png;base64,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"
+                                alt="i" class="float-end" style="width: 13px;"></h6>
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFokmebfkMKTw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1704287105605?e=1729123200&v=beta&t=wp9l4sOi5N6flPGw21DslKGwr7uY5kuEopcfMJ2W5iE"
+                                    class="rounded-circle me-3" alt="Profile 1" style="width: 50px;">
+                                <div>
+                                    <h6 class="mb-0">Arsalan Ahmed</h6>
+                                    <small class="text-muted">Deputy Manager Database - IT at Central Depository
+                                        Company</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-success btn-sm mt-2 rounded-pill mx-5">+ Follow</button>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="https://media.licdn.com/dms/image/v2/C560BAQHaVYd13rRz3A/company-logo_100_100/company-logo_100_100/0/1638831590218/linkedin_logo?e=1732147200&v=beta&t=iT1CSEF_visx9Qj3phQF4SGOCcrm3h_7eti-gQG4D1I"
+                                    class="rounded-circle me-2" alt="Profile 2" style="width: 50px;">
+                                <div>
+                                    <h6 class="mb-1">LinkedIn</h6>
+                                    <small class="text-muted">Company • Software Development</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-success btn-sm mt-2 rounded-pill mx-5">+ Follow</button>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="https://media.licdn.com/dms/image/D5603AQHv6LsdiUg1kw/profile-displayphoto-shrink_100_100/0/1695167344576?e=1729123200&v=beta&t=pk9qnvyvYslvO__h3krOGC3fftDeGD1QOpty6h5kaZ0"
+                                    class="rounded-circle me-3" alt="Profile 3" style="width: 50px;">
+                                <div>
+                                    <h6 class="mb-0">Bill Gates</h6>
+                                    <small class="text-muted">Consultant | Internal Audit at Ecovis Al Sabti</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-outline-success btn-sm mt-2 rounded-pill mx-5">+ Follow</button>
+                        </div>
+                        <a href="#" class="text-decoration-none text-muted">View all recomendations ➔</a>
+                    </div>
+                    <div class=" mt-4 position-sticky top-0">
+                        <!-- Top Image Section -->
+                        <div class="text-center">
+                            <img src="https://media.licdn.com/media/AAYQAgTPAAgAAQAAAAAAADVuOvKzTF-3RD6j-qFPqhubBQ.png"
+                                alt="LinkedIn Ad" class="img-fluid rounded">
+                        </div>
+
+                        <!-- Footer Links -->
+                        <div class="text-center mt-4 lh-lg ">
+                            <ul class="list-inline ">
+                                <li class="list-inline-item "><a href="#"
+                                        class="text-decoration-none text-secondary">About</a></li>
+                                <li class="list-inline-item"><a href="#"
+                                        class="text-decoration-none text-secondary">Accessibility</a></li>
+                                <li class="list-inline-item"><a href="#"
+                                        class="text-decoration-none text-secondary">Help Center</a></li><br>
+                                <li class="list-inline-item"><a href="#"
+                                        class="text-decoration-none text-secondary">Privacy & Terms</a></li>
+                                <li class="list-inline-item"><a href="#" class="text-decoration-none text-secondary">Ad
+                                        Choices</a></li><br>
+                                <li class="list-inline-item"><a href="#"
+                                        class="text-decoration-none text-secondary">Advertising</a></li>
+
+                                <li class="list-inline-item"><a href="#"
+                                        class="text-decoration-none text-secondary">Business Services</a></li><br>
+                                <li class="list-inline-item"><a href="#" class="text-decoration-none text-secondary">Get
+                                        the LinkedIn app</a></li>
+                                <li class="list-inline-item"><a href="#"
+                                        class="text-decoration-none text-secondary">More</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- LinkedIn Branding -->
+                        <div class="text-center mt-4">
+                            <p><a href="#"><img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+                                        alt="LinkedIn Logo" width="40px"></a>
+                                LinkedIn Corporation © 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container mt-3 d-flex justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-8 col-sm-10 ">
+            <!-- Post Card -->
+           
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

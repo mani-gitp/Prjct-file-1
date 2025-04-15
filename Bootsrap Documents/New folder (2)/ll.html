@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Clone Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .navbar-brand img {
+            height: 30px;
+        }
+        .form-control {
+            border-radius: 50px;
+        }
+        .card {
+            border-radius: 10px;
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .card-img-top {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .btn-light {
+            color: #6c757d;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+
+<body>
+
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <!-- Left side: Logo and Search Bar -->
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <form class="d-flex ms-3" style="flex-grow: 1; max-width: 400px;">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="background-color: #eef3f8;">
+        </form>
+        <!-- Toggler for Mobile View -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Right side: Navbar Items -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto flex-row">
+                <li class="nav-item me-2">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-house-door-fill"></i><br class="d-none d-lg-block">Home</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-people-fill"></i><br class="d-none d-lg-block">My Network</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-briefcase-fill"></i><br class="d-none d-lg-block">Jobs</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-chat-dots-fill"></i><br class="d-none d-lg-block">Messaging</a>
+                </li>
+                <li class="nav-item me-2 position-relative">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-bell-fill"></i><br class="d-none d-lg-block">Notifications
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            1
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown me-2">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="" alt="Profile" class="rounded-circle" style="width: 25px;"><br class="d-none d-lg-block">Me
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown me-2">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-grid-fill"></i><br class="d-none d-lg-block">For Business
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Business Services</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#" style="color: #f0a500;"><i class="bi bi-star-fill"></i><br class="d-none d-lg-block">Try Premium for PKR0</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

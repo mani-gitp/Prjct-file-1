@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <!-- Bootstrap Icons -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+      
+</head>
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid d-flex justify-content-between">
+        <div class="d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="height: 30px;">
+            </a>
+            <form class="d-flex ms-3" style="flex-grow: 1; width: 250px;">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="background-color: #eef3f8;">
+            </form>
+        </div>
+
+    
+        <div class="d-flex align-items-center">
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item me-3">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-house-door-fill"></i><br>Home</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-people-fill"></i><br>My Network</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-briefcase-fill"></i><br>Jobs</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link text-center" href="#"><i class="bi bi-chat-dots-fill"></i><br>Messaging</a>
+                </li>
+                <li class="nav-item me-3">
+                    <a class="nav-link text-center position-relative" href="#">
+                        <i class="bi bi-bell-fill"></i><br>Notifications
+        
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            1
+                        </span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown me-3">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGufZNNQyAE5KcX-rhzFFSZ-uII6icOjTxaQ&s" alt="Profile" class="rounded-circle" style="height: 23px; width: 23px; margin-bottom: 0px;" ><br>Me
+                    </a>
+                    <ul class="dropdown-menu" >
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown me-3">
+                    <a class="nav-link dropdown-toggle text-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-grid-fill"></i><br>For Business
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Business Services</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center" href="#" style="color: #f0a500;"><i class="bi bi-star-fill"></i><br>Try Premium for PKR0</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="jumbotron jumbotron-fluid bg-primary text-white">
+        <div class="container">
+            <h1 class="display-4">Welcome to your professional community</h1>
+            <p class="lead">Connect with colleagues, find new opportunities, and grow your career.</p>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+  
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Your Profile</h5>
+                        <p class="card-text">View your profile and activity.</p>
+                        <a href="#" class="btn btn-primary">View Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Start a Post</h5>
+                        <textarea class="form-control" rows="3" placeholder="What's on your mind?"></textarea>
+                        <button class="btn btn-primary mt-2">Post</button>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Just landed a new job at XYZ Corp!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Jobs You May Be Interested In</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item">Software Engineer at ABC Corp</li>
+                            <li class="list-group-item">Data Analyst at 123 Inc.</li>
+                            <li class="list-group-item">Product Manager at XYZ Co.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center text-lg-start mt-5">
+        <div class="text-center p-3">
+            © 2024 LinkedIn Clone | <a href="#">About</a> | <a href="#">Help Center</a> | <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
